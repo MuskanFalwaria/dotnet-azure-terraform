@@ -1,0 +1,20 @@
+# Ignore .NET build outputs
+bin/
+obj/
+
+# Ignore Python virtual environments (if any)
+venv/
+
+# Terraform state files
+*.tfstate
+*.tfstate.backup
+.terraform/
+
+# User-specific
+*.user
+*.vs/
+
+# Other common
+__pycache__/
+*.pyc
+.DS_Store
