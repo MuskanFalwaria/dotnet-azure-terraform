@@ -2,11 +2,7 @@ pipeline {
     agent any
 
     environment {
-        ARM_CLIENT_ID       = credentials('AZURE_CREDENTIALS_CLIENT_ID')
-        ARM_CLIENT_SECRET   = credentials('AZURE_CREDENTIALS_CLIENT_SECRET')
-        ARM_SUBSCRIPTION_ID = credentials('AZURE_CREDENTIALS_SUBSCRIPTION_ID')
-        ARM_TENANT_ID       = credentials('AZURE_CREDENTIALS_TENANT_ID')
-    }
+        AZURE_CREDENTIALS = credentials('azure-service-principal')
 
     stages {
         stage('Terraform Init') {
